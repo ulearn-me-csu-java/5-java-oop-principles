@@ -3,9 +3,6 @@ package com.example.task02;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Счет к оплате
- */
 public class Bill {
     private List<BillItem> items = new ArrayList<>();
 
