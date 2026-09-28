@@ -28,7 +28,6 @@ public class Task01MainTest {
     private static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("yyyy.MM.dd");
 
     private final Class<?> loggerClass;
-
     {
         try {
             loggerClass = Class.forName(LOGGER_CLASS_NAME);

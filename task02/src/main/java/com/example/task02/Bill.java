@@ -44,7 +44,7 @@ public class Bill {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder("Счет к оплате\n");
+        StringBuilder sb = new StringBuilder("**Счет к оплате\n");
         for(BillItem item : items) {
             sb.append(item.item.getName()).append('(').append(item.amount).append(')');
             sb.append('\n');
@@ -53,7 +53,7 @@ public class Bill {
         return sb.toString();
     }
 
-    private static class BillItem {
+    static class BillItem {
         final Item item;
         int amount;
 
