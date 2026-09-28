@@ -28,4 +28,9 @@ public interface TimeUnit {
      */
     long toMinutes();
 
+    long getHours();
+
+    default long toHours() {
+        return getHours();
+    }
 }
