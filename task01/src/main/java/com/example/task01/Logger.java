@@ -8,7 +8,7 @@ import java.util.Map;
 public class Logger {
 
     private final String name;
-    private static Level level = Level.DEBUG;
+    private Level level = Level.DEBUG;
 
     private static final Map<String, Logger> instances = new HashMap<>();
 
@@ -29,7 +29,7 @@ public class Logger {
     }
 
     public void setLevel(Level level) {
-        Logger.level = level;
+        this.level = level;
     }
 
     public void log(Level messageLevel, String message){
