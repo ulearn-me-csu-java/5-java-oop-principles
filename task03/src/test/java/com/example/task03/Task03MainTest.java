@@ -14,8 +14,8 @@ public class Task03MainTest {
      */
     private void testTimeUnit(TimeUnit timeUnit, long expectedMillis, long expectedSeconds, long expectedMinutes) {
         long actualMillis = timeUnit.toMillis();
-        long actualSeconds = timeUnit.toSeconds();
-        long actualMinutes = timeUnit.toMinutes();
+        long actualSeconds = timeUnit.getSeconds();
+        long actualMinutes = timeUnit.getMinutes();
         Assertions.assertEquals(expectedMillis, actualMillis, "Количество миллисекунд не соответствует ожидаемому");
         Assertions.assertEquals(expectedSeconds, actualSeconds, "Количество секунд не соответствует ожидаемому");
         Assertions.assertEquals(expectedMinutes, actualMinutes, "Количество минут не соответствует ожидаемому");
