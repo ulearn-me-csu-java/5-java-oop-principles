@@ -33,3 +33,4 @@ out/
 
 # MCP-сервер Serena
 .serena/
+/task01/src/main/java/com/example/task01/Logger.java
