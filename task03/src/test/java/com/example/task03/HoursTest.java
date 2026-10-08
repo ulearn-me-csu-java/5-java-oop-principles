@@ -99,7 +99,7 @@ public class HoursTest {
     public void testUtilsFromHours() {
         final Method conversion = findConversionFromHours();
         final TimeUnit converted = (TimeUnit) invoke(conversion, null, newHours(3));
-        Assertions.assertEquals(3 * MILLIS_IN_HOUR, converted.toMillis(), "Конвертация из часов не должна менять продолжительность интервала");
+        Assertions.assertEquals(3 * MILLIS_IN_HOUR, converted.getMilliseconds(), "Конвертация из часов не должна менять продолжительность интервала");
     }
 
     /**
@@ -116,9 +116,9 @@ public class HoursTest {
                                 final long expectedSeconds,
                                 final long expectedMinutes,
                                 final long expectedHours) {
-        Assertions.assertEquals(expectedMillis, timeUnit.toMillis(), "Количество миллисекунд не соответствует ожидаемому");
-        Assertions.assertEquals(expectedSeconds, timeUnit.toSeconds(), "Количество секунд не соответствует ожидаемому");
-        Assertions.assertEquals(expectedMinutes, timeUnit.toMinutes(), "Количество минут не соответствует ожидаемому");
+        Assertions.assertEquals(expectedMillis, timeUnit.getMilliseconds(), "Количество миллисекунд не соответствует ожидаемому");
+        Assertions.assertEquals(expectedSeconds, timeUnit.getSeconds(), "Количество секунд не соответствует ожидаемому");
+        Assertions.assertEquals(expectedMinutes, timeUnit.getMinutes(), "Количество минут не соответствует ожидаемому");
         Assertions.assertEquals(expectedHours, getHours(timeUnit), "Количество часов не соответствует ожидаемому");
     }
 

@@ -13,9 +13,9 @@ public class Task03MainTest {
      * @param expectedMinutes ожидаемое количество минут
      */
     private void testTimeUnit(TimeUnit timeUnit, long expectedMillis, long expectedSeconds, long expectedMinutes) {
-        long actualMillis = timeUnit.toMillis();
-        long actualSeconds = timeUnit.toSeconds();
-        long actualMinutes = timeUnit.toMinutes();
+        long actualMillis = timeUnit.getMilliseconds();
+        long actualSeconds = timeUnit.getSeconds();
+        long actualMinutes = timeUnit.getMinutes();
         Assertions.assertEquals(expectedMillis, actualMillis, "Количество миллисекунд не соответствует ожидаемому");
         Assertions.assertEquals(expectedSeconds, actualSeconds, "Количество секунд не соответствует ожидаемому");
         Assertions.assertEquals(expectedMinutes, actualMinutes, "Количество минут не соответствует ожидаемому");
@@ -68,25 +68,25 @@ public class Task03MainTest {
 
     @Test
     public void testUtils() {
-        Seconds seconds = TimeUnitUtils.toSeconds(new Milliseconds(1500));
+        Seconds seconds = TimeUnitUtils.getSeconds(new Milliseconds(1500));
         testTimeUnit(seconds, 2000, 2, 0);
     }
 
     @Test
     public void testUtils2() {
-        Seconds seconds = TimeUnitUtils.toSeconds(new Milliseconds(1499));
+        Seconds seconds = TimeUnitUtils.getSeconds(new Milliseconds(1499));
         testTimeUnit(seconds, 1000, 1, 0);
     }
 
     @Test
     public void testUtils3() {
-        Milliseconds millis = TimeUnitUtils.toMillis(new Seconds(29));
+        Milliseconds millis = TimeUnitUtils.getMilliseconds(new Seconds(29));
         testTimeUnit(millis, 29000, 29, 0);
     }
 
     @Test
     public void testUtils4() {
-        Milliseconds millis = TimeUnitUtils.toMillis(new Seconds(30));
+        Milliseconds millis = TimeUnitUtils.getMilliseconds(new Seconds(30));
         testTimeUnit(millis, 30000, 30, 1);
     }
 

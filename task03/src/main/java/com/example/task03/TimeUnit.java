@@ -4,13 +4,12 @@ package com.example.task03;
  * Интерфейс для интервалов времени в определенных единицах
  */
 public interface TimeUnit {
-
     /**
      * Возвращает продолжительность текущего интервала, пересчитанного в миллисекундах.
      *
      * @return количество миллисекунд в текущем интервале
      */
-    long toMillis();
+    long getMilliseconds();
 
     /**
      * Возвращает продолжительность текущего интервала, пересчитанного в секундах.
@@ -18,7 +17,7 @@ public interface TimeUnit {
      *
      * @return количество секунд в текущем интервале
      */
-    long toSeconds();
+    long getSeconds();
 
     /**
      * Возвращает продолжительность текущего интервала, пересчитанного в минутах.
@@ -26,6 +25,8 @@ public interface TimeUnit {
      *
      * @return количество минут в текущем интервале
      */
-    long toMinutes();
+    long getMinutes();
+
+    long getHours();
 
 }
