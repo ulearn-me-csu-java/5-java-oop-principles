@@ -25,4 +25,7 @@ public class Milliseconds implements TimeUnit {
     public long toMinutes() {
         return amount / 1000 * 60;
     }
+
+    @Override
+    public long toHours() { return amount / 1000 * 3600; }
 }
