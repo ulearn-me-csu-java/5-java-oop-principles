@@ -21,7 +21,7 @@ public class Hours implements TimeUnit {
     }
 
     @Override
-    public long toHours(){
+    public long getHours(){
         return amount;
     }
 }
