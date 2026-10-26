@@ -5,6 +5,18 @@ package com.example.task03;
  */
 public class TimeUnitUtils {
 
+    public static Hours toHours(Milliseconds millis) {
+        return new Hours(millis.getHours());
+    }
+    
+    public static Hours toHours(Seconds seconds) {
+        return new Hours(seconds.getHours());
+    }
+    
+    public static Hours toHours(Minutes minutes) {
+        return new Hours(minutes.getHours());
+    }
+
     /**
      * Конвертирует интервал в секундах в интервал в миллисекундах
      *
